@@ -1,0 +1,45 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<style>
+  body{margin:0;padding:22px 24px;background:#0a0907;font-family:var(--font-sans);color:var(--text-main)}
+  .lead{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--text-muted);margin:0 0 16px}
+  .grid{display:grid;grid-template-columns:repeat(9,1fr);gap:12px}
+  .ic{display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px 4px;border:1px solid var(--border-primary);border-radius:8px;background:var(--bg-card)}
+  .ic svg{width:22px;height:22px;stroke-width:2;stroke:var(--text-main);fill:none}
+  .ic.rust svg{stroke:var(--color-primary)}
+  .ic.moss svg{stroke:var(--color-accent)}
+  .ic.blood svg{stroke:var(--color-danger)}
+  .nm{font-family:var(--font-mono);font-size:9px;letter-spacing:.08em;color:var(--text-muted)}
+  .sizes{display:flex;align-items:flex-end;gap:14px;margin-top:20px;padding-top:16px;border-top:1px solid var(--border-primary)}
+  .sz{display:flex;flex-direction:column;align-items:center;gap:4px}
+  .sz .b{font-family:var(--font-mono);font-size:9px;color:var(--text-muted);letter-spacing:.08em}
+  .note{font-family:var(--font-mono);font-size:10px;color:var(--text-muted);margin-left:auto;align-self:center}
+</style></head><body>
+<div class="lead">Lucide · stroke 2 · 11–22px · no fills, no emoji</div>
+<div class="grid">
+  <div class="ic rust"><i data-lucide="skull"></i><span class="nm">skull</span></div>
+  <div class="ic"><i data-lucide="search"></i><span class="nm">search</span></div>
+  <div class="ic"><i data-lucide="wallet"></i><span class="nm">wallet</span></div>
+  <div class="ic"><i data-lucide="external-link"></i><span class="nm">external</span></div>
+  <div class="ic moss"><i data-lucide="check-circle-2"></i><span class="nm">check-c2</span></div>
+  <div class="ic moss"><i data-lucide="check"></i><span class="nm">check</span></div>
+  <div class="ic"><i data-lucide="x"></i><span class="nm">x</span></div>
+  <div class="ic rust"><i data-lucide="trending-up"></i><span class="nm">trending</span></div>
+  <div class="ic rust"><i data-lucide="users"></i><span class="nm">users</span></div>
+  <div class="ic rust"><i data-lucide="zap"></i><span class="nm">zap</span></div>
+  <div class="ic"><i data-lucide="arrow-left"></i><span class="nm">arrow-l</span></div>
+  <div class="ic blood"><i data-lucide="alert-triangle"></i><span class="nm">alert</span></div>
+  <div class="ic"><i data-lucide="copy"></i><span class="nm">copy</span></div>
+  <div class="ic"><i data-lucide="loader-2"></i><span class="nm">loader</span></div>
+</div>
+<div class="sizes">
+  <div class="sz"><i data-lucide="skull" style="width:11px;height:11px;stroke:var(--text-main);stroke-width:2;fill:none"></i><span class="b">11</span></div>
+  <div class="sz"><i data-lucide="skull" style="width:14px;height:14px;stroke:var(--text-main);stroke-width:2;fill:none"></i><span class="b">14</span></div>
+  <div class="sz"><i data-lucide="skull" style="width:16px;height:16px;stroke:var(--text-main);stroke-width:2;fill:none"></i><span class="b">16</span></div>
+  <div class="sz"><i data-lucide="skull" style="width:20px;height:20px;stroke:var(--text-main);stroke-width:2;fill:none"></i><span class="b">20</span></div>
+  <div class="sz"><i data-lucide="skull" style="width:22px;height:22px;stroke:var(--text-main);stroke-width:2;fill:none"></i><span class="b">22</span></div>
+  <span class="note">glyphs · · ← # ...  · no emoji, ever</span>
+</div>
+<script>lucide.createIcons()</script>
+</body></html>

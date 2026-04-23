@@ -1,0 +1,38 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:24px;background:#0a0907;font-family:var(--font-sans);color:var(--text-main)}
+  .row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-bottom:14px}
+  .lbl{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--text-muted);width:110px;flex-shrink:0}
+
+  .btn{font-family:var(--font-sans);font-size:14px;font-weight:600;padding:10px 20px;border-radius:8px;border:1px solid transparent;cursor:pointer;display:inline-flex;align-items:center;gap:8px;letter-spacing:.01em;line-height:1}
+  .primary{background:var(--color-primary);color:#fff;border-color:var(--color-primary)}
+  .primary.hover{background:var(--color-primary-hover);box-shadow:0 4px 24px rgba(168,90,62,.3);transform:translateY(-1px)}
+  .secondary{background:transparent;color:var(--text-main);border-color:var(--border-secondary)}
+  .secondary.hover{border-color:var(--color-primary);color:var(--color-primary)}
+  .ghost{background:transparent;color:var(--text-secondary);border-color:transparent;padding:8px 10px;font-weight:500}
+  .ghost.hover{color:var(--color-primary)}
+  .disabled{background:var(--bg-elevated);color:var(--text-muted);border-color:var(--border-primary);cursor:not-allowed}
+  .sm{padding:7px 14px;font-size:12.5px}
+  svg{width:14px;height:14px;stroke-width:2;stroke:currentColor;fill:none}
+</style></head><body>
+<div class="row"><span class="lbl">Primary</span>
+  <button class="btn primary">Scan</button>
+  <button class="btn primary hover">Scan</button>
+  <button class="btn primary"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M22 12h-6"/></svg>Connect Wallet</button>
+  <button class="btn primary sm">Upgrade to Agent</button>
+</div>
+<div class="row"><span class="lbl">Secondary</span>
+  <button class="btn secondary">← return</button>
+  <button class="btn secondary hover">← return</button>
+  <button class="btn secondary sm">Cancel</button>
+</div>
+<div class="row"><span class="lbl">Ghost / Link</span>
+  <button class="btn ghost">or connect your wallet</button>
+  <button class="btn ghost hover">or connect your wallet</button>
+</div>
+<div class="row"><span class="lbl">Disabled</span>
+  <button class="btn disabled">Scan</button>
+  <button class="btn primary sm" disabled style="opacity:.5;cursor:not-allowed">Scanning...</button>
+</div>
+</body></html>

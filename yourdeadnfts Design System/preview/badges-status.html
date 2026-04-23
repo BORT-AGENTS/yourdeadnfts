@@ -1,0 +1,66 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:26px 28px;background:#0a0907;font-family:var(--font-sans);color:var(--text-main)}
+  .lead{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--text-muted);margin:0 0 4px}
+  .sub{font-family:var(--font-serif);font-style:italic;font-size:14px;color:var(--text-secondary);margin:0 0 22px}
+  .block{margin-bottom:22px}
+  .row{display:flex;flex-wrap:wrap;gap:20px;align-items:baseline}
+
+  /* 1 · Rubber stamps — the brand's one and only status badge. */
+  .stamp{display:inline-block;padding:4px 12px;border-radius:0;font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;transform:rotate(-3deg);background:rgba(11,14,17,.55);backdrop-filter:blur(4px);border-top:1px solid currentColor;border-bottom:1px solid currentColor;color:var(--color-danger)}
+  .stamp.rust{color:#c27550}
+  .stamp.moss{color:var(--color-accent)}
+  .stamp.ash{color:var(--text-secondary);opacity:.7}
+
+  /* 2 · Forensic meta line — the SCAN header from the results view. */
+  .meta{font-family:var(--font-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted)}
+  .meta .addr{color:var(--text-main);border-bottom:1px solid var(--color-primary);padding-bottom:2px;letter-spacing:.05em;font-weight:600}
+  .meta .tag{color:var(--color-accent);letter-spacing:.2em}
+  .meta .ret{color:var(--text-muted);margin-left:18px}
+  .meta-bar{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding-bottom:12px;border-bottom:1px solid var(--border-primary)}
+
+  /* 3 · Hairline wallet tag — underlined address, no container. */
+  .wallet{font-family:var(--font-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);display:inline-flex;gap:8px;align-items:baseline}
+  .wallet .addr{color:var(--text-main);border-bottom:1px solid var(--color-primary);padding-bottom:1px;letter-spacing:.05em}
+
+  /* 4 · Obituary count — serif phrase, numeral in rust. */
+  .count{font-family:var(--font-serif);font-size:20px;color:var(--text-main);line-height:1.25}
+  .count .n{color:var(--color-primary);font-weight:600;font-size:26px;letter-spacing:-.02em}
+
+  .cap{font-family:var(--font-mono);font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--text-muted);display:block;margin-top:8px}
+</style></head><body>
+
+<div class="lead">Status language — no pills, no chips, no dots</div>
+<div class="sub">Rubber stamps, a mono meta line, and an underlined address. That's the whole vocabulary.</div>
+
+<div class="block">
+  <div class="row">
+    <span class="stamp">DEAD · 2Y</span>
+    <span class="stamp">DEAD · 14M</span>
+    <span class="stamp rust">DEAD · 3Y</span>
+    <span class="stamp moss">UPGRADED</span>
+    <span class="stamp ash">PENDING</span>
+  </div>
+  <span class="cap">01 · rubber stamps — top/bottom hairline, radius 0, rot −3°, mono</span>
+</div>
+
+<div class="block">
+  <div class="meta-bar">
+    <div class="meta">SCAN <span class="addr">0x742d…F0bEb</span> <span class="tag">· your wallet</span></div>
+    <div class="meta"><span class="ret">← return</span></div>
+  </div>
+  <span class="cap">02 · forensic meta line — results header · hairline rule below</span>
+</div>
+
+<div class="block">
+  <span class="wallet">CONNECTED <span class="addr">0x742d…F0bEb</span></span>
+  <span class="cap">03 · wallet tag — mono label, rust-underlined address, no fill</span>
+</div>
+
+<div class="block">
+  <div class="count"><span class="n">12</span> dead across <span class="n">3</span> collections</div>
+  <span class="cap">04 · obituary count — serif phrasing is the status, not a badge</span>
+</div>
+
+</body></html>

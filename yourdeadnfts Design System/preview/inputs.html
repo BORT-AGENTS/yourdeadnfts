@@ -1,0 +1,29 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:22px 24px;background:#0a0907;font-family:var(--font-sans);color:var(--text-main)}
+  .row{display:grid;grid-template-columns:80px 1fr;gap:14px;align-items:center;margin-bottom:12px}
+  .lbl{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--text-muted)}
+  .inp{position:relative;display:flex;align-items:center;background:var(--bg-surface);border:1px solid var(--border-primary);border-radius:8px;padding:0 14px;height:46px;font-family:var(--font-mono);font-size:13.5px}
+  .inp.focus{border-color:var(--color-primary);box-shadow:0 0 0 3px rgba(168,90,62,.1)}
+  .inp .icon{width:16px;height:16px;stroke:var(--text-muted);fill:none;stroke-width:2;flex-shrink:0;margin-right:10px}
+  .inp input{background:transparent;border:0;outline:0;flex:1;color:var(--text-main);font:inherit;min-width:0}
+  .inp input::placeholder{color:var(--text-muted)}
+  .btn-inline{background:var(--color-primary);color:#fff;border:0;border-radius:6px;padding:7px 14px;font:600 12px var(--font-sans);cursor:pointer}
+  .helper{font-family:var(--font-mono);font-size:10px;color:var(--text-muted);letter-spacing:.05em;margin-left:94px}
+  .helper.err{color:var(--color-danger)}
+</style></head><body>
+<div class="row"><span class="lbl">Default</span>
+  <div class="inp"><svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input placeholder="0x... or paste a wallet address"></div>
+</div>
+<div class="row"><span class="lbl">Filled</span>
+  <div class="inp"><svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input value="0x742d35Cc6634C0532925a3b844Bc9e7595F0bEb"><button class="btn-inline">Scan</button></div>
+</div>
+<div class="row"><span class="lbl">Focus</span>
+  <div class="inp focus"><svg class="icon" viewBox="0 0 24 24" style="stroke:var(--color-primary)"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input value="0x742d35Cc6634C0532925a3b844Bc9e759"><button class="btn-inline">Scan</button></div>
+</div>
+<div class="row"><span class="lbl">Error</span>
+  <div class="inp" style="border-color:rgba(139,42,42,.5)"><svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input value="not a wallet"></div>
+</div>
+<div class="helper err">Not a valid BNB Chain address.</div>
+</body></html>

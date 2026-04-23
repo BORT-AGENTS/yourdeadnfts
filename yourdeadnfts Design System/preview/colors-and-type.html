@@ -1,0 +1,73 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<title>colors_and_type.css — preview</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:28px;background:#0a0907;color:var(--text-main);font-family:var(--font-sans)}
+  .wrap{display:grid;gap:22px;max-width:900px}
+  section{border:1px solid var(--border-primary);border-radius:12px;padding:18px 20px;background:rgba(20,18,14,.6)}
+  .eyebrow{display:inline-block;font-family:var(--font-mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--text-muted);margin-bottom:12px}
+
+  /* Palette */
+  .sw-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:8px}
+  .sw{border-radius:6px;overflow:hidden;border:1px solid rgba(255,255,255,.05)}
+  .chip{height:44px}
+  .lbl{padding:5px 6px;font-family:var(--font-mono);font-size:9px;line-height:1.3;background:#1c1a16;color:var(--text-main)}
+  .hex{color:var(--text-muted);text-transform:uppercase;font-size:8.5px}
+
+  /* Families */
+  .fam{display:grid;grid-template-columns:70px 1fr;gap:14px;padding:10px 0;border-bottom:1px solid var(--border-primary);align-items:center}
+  .fam:last-child{border:0}
+  .flbl{font-family:var(--font-mono);font-size:10px;color:var(--text-muted);letter-spacing:.2em;text-transform:uppercase}
+  .sans-spec{font-family:var(--font-sans);font-size:22px;font-weight:700;letter-spacing:-.02em}
+  .serif-spec{font-family:var(--font-serif);font-size:24px;font-weight:400;letter-spacing:-.01em}
+  .mono-spec{font-family:var(--font-mono);font-size:14px;font-weight:500;letter-spacing:.05em}
+  .local-tag{display:inline-block;margin-left:8px;padding:1px 6px;border:1px solid rgba(107,142,92,.3);background:rgba(107,142,92,.08);color:#6b8e5c;font-family:var(--font-mono);font-size:8.5px;letter-spacing:.15em;text-transform:uppercase;border-radius:3px;vertical-align:2px}
+  .sub{font-family:var(--font-mono);font-size:9.5px;color:var(--text-muted);margin-top:2px;letter-spacing:.08em}
+
+  /* Scale */
+  .row{display:grid;grid-template-columns:100px 1fr;gap:12px;padding:6px 0;border-bottom:1px solid var(--border-primary);align-items:baseline}
+  .row:last-child{border:0}
+  .tok{font-family:var(--font-mono);font-size:10px;color:var(--text-muted)}
+  .hero-spec{font-family:var(--font-sans);font-size:32px;font-weight:800;letter-spacing:-.03em;line-height:1;background:linear-gradient(135deg,var(--text-main) 40%,var(--color-primary) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .h2-spec{font-family:var(--font-sans);font-size:18px;font-weight:700;letter-spacing:-.01em}
+  .body-spec{font-family:var(--font-sans);font-size:13px;color:var(--text-secondary)}
+  .ob-spec{font-family:var(--font-serif);font-size:20px}
+  .ob-num-spec{color:var(--color-primary);font-weight:600}
+  .meta-spec{font-family:var(--font-mono);font-size:10px;color:var(--text-muted);letter-spacing:.2em;text-transform:uppercase}
+</style></head><body>
+
+<div class="wrap">
+  <section>
+    <div class="eyebrow">Palette — 10 tokens</div>
+    <div class="sw-grid">
+      <div class="sw"><div class="chip" style="background:#0a0907"></div><div class="lbl">dark-1<div class="hex">#0A0907</div></div></div>
+      <div class="sw"><div class="chip" style="background:#14120e"></div><div class="lbl">dark-2<div class="hex">#14120E</div></div></div>
+      <div class="sw"><div class="chip" style="background:#1c1a16"></div><div class="lbl">dark-3<div class="hex">#1C1A16</div></div></div>
+      <div class="sw"><div class="chip" style="background:#2a2620"></div><div class="lbl">dark-4<div class="hex">#2A2620</div></div></div>
+      <div class="sw"><div class="chip" style="background:#433d33"></div><div class="lbl">dark-5<div class="hex">#433D33</div></div></div>
+      <div class="sw"><div class="chip" style="background:#a85a3e"></div><div class="lbl">rust<div class="hex">#A85A3E</div></div></div>
+      <div class="sw"><div class="chip" style="background:#6b8e5c"></div><div class="lbl">moss<div class="hex">#6B8E5C</div></div></div>
+      <div class="sw"><div class="chip" style="background:#8b2a2a"></div><div class="lbl">blood<div class="hex">#8B2A2A</div></div></div>
+      <div class="sw"><div class="chip" style="background:#d9d2bf"></div><div class="lbl">bone<div class="hex">#D9D2BF</div></div></div>
+      <div class="sw"><div class="chip" style="background:#8a867b"></div><div class="lbl">ash<div class="hex">#8A867B</div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Type families — IBM Plex</div>
+    <div class="fam"><span class="flbl">Sans</span><div><div class="sans-spec">Your NFTs are dead.</div><div class="sub">IBM Plex Sans · 400 500 600 700 800</div></div></div>
+    <div class="fam"><span class="flbl">Serif</span><div><div class="serif-spec">12 dead across 3 collections</div><div class="sub">IBM Plex Serif · 400 500 600 700</div></div></div>
+    <div class="fam"><span class="flbl">Mono</span><div><div class="mono-spec">0x742d…F0bEb · DEAD · 2Y<span class="local-tag">local .ttf</span></div><div class="sub">IBM Plex Mono · 500 (local) · 400 600 (cdn)</div></div></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Semantic roles</div>
+    <div class="row"><span class="tok">hero</span><span class="hero-spec">Your NFTs are dead.</span></div>
+    <div class="row"><span class="tok">h2</span><span class="h2-spec">Choose agent type</span></div>
+    <div class="row"><span class="tok">obituary</span><span class="ob-spec"><span class="ob-num-spec">3</span> dead across <span class="ob-num-spec">2</span> collections</span></div>
+    <div class="row"><span class="tok">body</span><span class="body-spec">Paste a wallet to see dead NFTs sitting idle for over a year.</span></div>
+    <div class="row"><span class="tok">meta</span><span class="meta-spec">SCAN 0x1234…5678 · YOUR WALLET</span></div>
+  </section>
+</div>
+</body></html>

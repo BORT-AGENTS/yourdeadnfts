@@ -1,0 +1,23 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:26px 24px;background:#0a0907;font-family:var(--font-sans);color:var(--text-main)}
+  .row{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .cell{display:flex;flex-direction:column;align-items:center;gap:10px}
+  .box{width:110px;height:70px;background:var(--bg-card);border:1px solid var(--border-primary);border-radius:12px}
+  .none{background:transparent}
+  .card{box-shadow:0 2px 12px rgba(0,0,0,.3)}
+  .elev{box-shadow:0 8px 32px rgba(0,0,0,.5);border-radius:16px}
+  .glow{box-shadow:0 4px 24px rgba(168,90,62,.3);background:var(--color-primary);border-color:var(--color-primary)}
+  .nm{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;color:var(--text-main);font-weight:600}
+  .spec{font-family:var(--font-mono);font-size:9px;color:var(--text-muted);text-align:center;line-height:1.4}
+  .lead{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--text-muted);margin:0 0 16px}
+</style></head><body>
+<div class="lead">Shadow system · cards rely on border, not lift</div>
+<div class="row">
+  <div class="cell"><div class="box none"></div><div class="nm">NONE</div><div class="spec">cards · default<br>(border + bg only)</div></div>
+  <div class="cell"><div class="box card"></div><div class="nm">CARD</div><div class="spec">0 2 12<br>rgba(0,0,0,.3)</div></div>
+  <div class="cell"><div class="box elev"></div><div class="nm">ELEVATED</div><div class="spec">0 8 32<br>rgba(0,0,0,.5) · modal</div></div>
+  <div class="cell"><div class="box glow"></div><div class="nm">PRIMARY</div><div class="spec">0 4 24<br>rust @ .3 · btn:hover</div></div>
+</div>
+</body></html>

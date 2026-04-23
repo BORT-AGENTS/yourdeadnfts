@@ -1,0 +1,36 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:0;background:#0a0907;font-family:var(--font-sans);color:var(--text-main);overflow:hidden}
+  .stage{position:relative;width:100%;height:330px;background:#0d1013;overflow:hidden;isolation:isolate}
+  .topo{position:absolute;inset:0;background-image:url('../assets/topography.svg');background-size:900px;opacity:.9}
+  .orb{position:absolute;border-radius:50%;filter:blur(120px);opacity:.06;mix-blend-mode:screen}
+  .o1{width:420px;height:420px;background:#8b2a2a;top:-80px;left:-60px}
+  .o2{width:500px;height:500px;background:#a85a3e;top:40px;right:-120px}
+  .o3{width:360px;height:360px;background:#6b8e5c;bottom:-120px;left:30%}
+  .label{position:absolute;padding:4px 10px;border:1px solid var(--border-primary);background:rgba(11,14,17,.75);font-family:var(--font-mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-secondary);border-radius:4px;backdrop-filter:blur(6px)}
+  .l1{top:14px;left:16px}
+  .l2{top:60px;left:16px;color:var(--color-danger)}
+  .l3{top:106px;left:16px;color:var(--color-primary)}
+  .l4{top:152px;left:16px;color:var(--color-accent)}
+  .frost{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72%;padding:16px 20px;border:1px solid var(--border-primary);border-radius:12px;background:rgba(11,14,17,.6);backdrop-filter:blur(12px);text-align:center}
+  .frost .s{font-family:var(--font-serif);font-size:20px;color:var(--text-main);letter-spacing:-.01em}
+  .frost .m{font-family:var(--font-mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);margin-top:4px}
+  .cap{position:absolute;bottom:12px;right:16px;font-family:var(--font-mono);font-size:9.5px;letter-spacing:.15em;color:var(--text-muted);text-transform:uppercase}
+</style></head><body>
+<div class="stage">
+  <div class="topo"></div>
+  <div class="orb o1"></div>
+  <div class="orb o2"></div>
+  <div class="orb o3"></div>
+  <div class="label l1">01 · topography.svg · fixed</div>
+  <div class="label l2">02 · orb · blood · blur 180</div>
+  <div class="label l3">03 · orb · rust · blur 180</div>
+  <div class="label l4">04 · orb · moss · blur 180</div>
+  <div class="frost">
+    <div class="s">frosted surface sits on top</div>
+    <div class="m">backdrop-filter · blur 12 · bg rgba(11,14,17,.6)</div>
+  </div>
+  <div class="cap">drift · float · 30s ease-in-out</div>
+</div>
+</body></html>

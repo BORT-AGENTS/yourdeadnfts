@@ -1,0 +1,21 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:20px;background:#0a0907;font-family:var(--font-sans);color:var(--text-main)}
+  .row{display:grid;grid-template-columns:140px 40px 1fr 120px;gap:10px;align-items:center;padding:7px 10px;border-bottom:1px solid var(--border-primary)}
+  .row:last-child{border:0}
+  .tok{font-family:var(--font-mono);font-size:11px;color:var(--text-main)}
+  .dot{width:22px;height:22px;border-radius:6px;border:1px solid rgba(255,255,255,.06)}
+  .use{color:var(--text-secondary);font-size:12px}
+  .val{font-family:var(--font-mono);font-size:10px;color:var(--text-muted);text-align:right}
+</style></head><body>
+<div class="row"><span class="tok">--color-primary</span><span class="dot" style="background:#a85a3e"></span><span class="use">Buttons, links, focus rings, accents</span><span class="val">#A85A3E</span></div>
+<div class="row"><span class="tok">--color-accent</span><span class="dot" style="background:#6b8e5c"></span><span class="use">"Alive" signals, success, active pulse</span><span class="val">#6B8E5C</span></div>
+<div class="row"><span class="tok">--color-danger</span><span class="dot" style="background:#8b2a2a"></span><span class="use">"Dead" eyebrow, error states</span><span class="val">#8B2A2A</span></div>
+<div class="row"><span class="tok">--bg-background</span><span class="dot" style="background:#0a0907"></span><span class="use">Page background (under topo map)</span><span class="val">#0A0907</span></div>
+<div class="row"><span class="tok">--bg-surface</span><span class="dot" style="background:#14120e"></span><span class="use">Inputs, image frames</span><span class="val">#14120E</span></div>
+<div class="row"><span class="tok">--bg-card</span><span class="dot" style="background:#1c1a16"></span><span class="use">Cards, modal, pills</span><span class="val">#1C1A16</span></div>
+<div class="row"><span class="tok">--text-main</span><span class="dot" style="background:#d9d2bf"></span><span class="use">Primary text (bone)</span><span class="val">#D9D2BF</span></div>
+<div class="row"><span class="tok">--text-secondary</span><span class="dot" style="background:#8a867b"></span><span class="use">Body, descriptions</span><span class="val">#8A867B</span></div>
+<div class="row"><span class="tok">--text-muted</span><span class="dot" style="background:#5c5a51"></span><span class="use">Meta labels, hints, nav</span><span class="val">#5C5A51</span></div>
+</body></html>

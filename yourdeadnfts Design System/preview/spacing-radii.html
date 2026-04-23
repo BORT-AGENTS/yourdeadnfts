@@ -1,0 +1,43 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;padding:20px;background:#0a0907;font-family:var(--font-sans);color:var(--text-main)}
+  .wrap{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .group-lbl{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px}
+  .row{display:flex;align-items:center;gap:10px;margin-bottom:8px;font-family:var(--font-mono);font-size:10.5px}
+  .tick{color:var(--text-muted);width:42px;flex-shrink:0}
+  .bar{height:8px;background:var(--color-primary);border-radius:2px}
+  .px{color:var(--text-secondary);margin-left:auto}
+  .radii{display:flex;gap:14px;align-items:flex-end}
+  .rad{display:flex;flex-direction:column;align-items:center;gap:6px}
+  .rad-box{width:54px;height:54px;background:var(--bg-card);border:1px solid var(--border-primary)}
+  .rad-lbl{font-family:var(--font-mono);font-size:9.5px;color:var(--text-muted);letter-spacing:.08em}
+  .rad-nm{color:var(--text-main);font-weight:600}
+  .stamp{padding:3px 10px;border-top:1px solid var(--color-danger);border-bottom:1px solid var(--color-danger);color:var(--color-danger);font-family:var(--font-mono);font-size:9px;letter-spacing:.18em;transform:rotate(-3deg);display:inline-block}
+</style></head><body>
+<div class="wrap">
+  <div>
+    <div class="group-lbl">Spacing · 4px base</div>
+    <div class="row"><span class="tick">space-1</span><div class="bar" style="width:4px"></div><span class="px">4</span></div>
+    <div class="row"><span class="tick">space-2</span><div class="bar" style="width:8px"></div><span class="px">8</span></div>
+    <div class="row"><span class="tick">space-3</span><div class="bar" style="width:12px"></div><span class="px">12</span></div>
+    <div class="row"><span class="tick">space-4</span><div class="bar" style="width:16px"></div><span class="px">16</span></div>
+    <div class="row"><span class="tick">space-6</span><div class="bar" style="width:24px"></div><span class="px">24</span></div>
+    <div class="row"><span class="tick">space-8</span><div class="bar" style="width:32px"></div><span class="px">32</span></div>
+    <div class="row"><span class="tick">space-12</span><div class="bar" style="width:48px"></div><span class="px">48</span></div>
+    <div class="row"><span class="tick">space-20</span><div class="bar" style="width:80px"></div><span class="px">80</span></div>
+  </div>
+  <div>
+    <div class="group-lbl">Radii</div>
+    <div class="radii" style="margin-bottom:22px">
+      <div class="rad"><div class="rad-box" style="border-radius:6px"></div><div class="rad-lbl"><span class="rad-nm">sm</span> · 6</div></div>
+      <div class="rad"><div class="rad-box" style="border-radius:8px"></div><div class="rad-lbl"><span class="rad-nm">md</span> · 8 · buttons</div></div>
+      <div class="rad"><div class="rad-box" style="border-radius:12px"></div><div class="rad-lbl"><span class="rad-nm">lg</span> · 12 · cards</div></div>
+      <div class="rad"><div class="rad-box" style="border-radius:16px"></div><div class="rad-lbl"><span class="rad-nm">xl</span> · 16 · modal</div></div>
+      <div class="rad"><div class="rad-box" style="border-radius:100px"></div><div class="rad-lbl"><span class="rad-nm">pill</span> · 100</div></div>
+    </div>
+    <div class="group-lbl">Exception · the stamp</div>
+    <div style="display:flex;gap:10px;align-items:center;margin-top:10px"><span class="stamp">DEAD · 2Y</span><span style="font-family:var(--font-mono);font-size:10px;color:var(--text-muted)">radius 0, rot −3°, T/B border only</span></div>
+  </div>
+</div>
+</body></html>

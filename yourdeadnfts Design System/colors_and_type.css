@@ -1,0 +1,199 @@
+/* ══════════════════════════════════════════════════════════
+   yourdeadnfts Design System — colors + type tokens
+   ══════════════════════════════════════════════════════════
+
+   Source: yourdeadnfts codebase (src/styles/index.css)
+   Tagline: "Your NFTs are dead. Turn them into AI agents."
+   Mood: forensic, archival, gothic-industrial. Rust + bone
+   on warm black. Mono accents, serif obituary headlines,
+   uppercase tracked metadata labels.
+*/
+
+/* Local brand font — IBM Plex Mono (Medium).
+   Sans + Serif still load from Google Fonts; the user has only
+   supplied Mono so far. Flag: need IBM Plex Sans (400/500/600/700/800)
+   and IBM Plex Serif (400/500/600/700) .ttf/.woff2 to go fully offline. */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('fonts/IBMPlexMono-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Serif:wght@400;500;600;700&display=swap');
+
+:root {
+  /* ── Palette ────────────────────────────────────────────── */
+  /* Warm blacks (the crypt) */
+  --bnb-dark-1: #0a0907;  /* page bg */
+  --bnb-dark-2: #14120e;  /* surface */
+  --bnb-dark-3: #1c1a16;  /* card */
+  --bnb-dark-4: #2a2620;  /* elevated / border-primary */
+  --bnb-dark-5: #433d33;  /* border-secondary */
+
+  /* Signals (dead vs alive) */
+  --bnb-yellow:       #a85a3e;  /* rust — primary accent */
+  --bnb-yellow-hover: #c27550;  /* lighter rust */
+  --bnb-green:        #6b8e5c;  /* moss — "alive" */
+  --bnb-red:          #8b2a2a;  /* muted blood — "dead" */
+
+  /* Text (bone tones) */
+  --bnb-text-1: #d9d2bf;  /* bone — main */
+  --bnb-text-2: #8a867b;  /* warm ash */
+  --bnb-text-3: #5c5a51;  /* dim */
+
+  /* ── Semantic (use these) ───────────────────────────────── */
+  --bg-background:       var(--bnb-dark-1);
+  --bg-surface:          var(--bnb-dark-2);
+  --bg-card:             var(--bnb-dark-3);
+  --bg-elevated:         var(--bnb-dark-4);
+  --border-primary:      var(--bnb-dark-4);
+  --border-secondary:    var(--bnb-dark-5);
+  --color-primary:       var(--bnb-yellow);
+  --color-primary-hover: var(--bnb-yellow-hover);
+  --color-primary-subtle: rgba(168, 90, 62, 0.08);
+  --color-primary-ring:   rgba(168, 90, 62, 0.1);
+  --color-accent:        var(--bnb-green);
+  --color-danger:        var(--bnb-red);
+  --text-main:           var(--bnb-text-1);
+  --text-secondary:      var(--bnb-text-2);
+  --text-muted:          var(--bnb-text-3);
+
+  /* ── Type families ─────────────────────────────────────── */
+  --font-sans:   'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono:   'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-serif:  'IBM Plex Serif', Georgia, 'Times New Roman', serif;
+
+  /* ── Radii ─────────────────────────────────────────────── */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* ── Shadows ───────────────────────────────────────────── */
+  --shadow-card:     0 2px 12px rgba(0, 0, 0, 0.3);
+  --shadow-elevated: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-primary:  0 4px 24px rgba(168, 90, 62, 0.3);
+  --shadow-primary-hover: 0 8px 32px rgba(168, 90, 62, 0.4);
+
+  /* ── Spacing (4-step base) ─────────────────────────────── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* ── Type scale ─────────────────────────────────────────── */
+  --fs-xs:   11px;   /* uppercase meta, eyebrows */
+  --fs-sm:   12px;
+  --fs-base: 14px;   /* body */
+  --fs-md:   16px;
+  --fs-lg:   20px;
+  --fs-xl:   28px;   /* stat value */
+  --fs-2xl:  1.6rem; /* obituary */
+  --fs-3xl:  2.2rem; /* ob-num */
+  --fs-hero: clamp(2.4rem, 4vw, 3.5rem);
+}
+
+/* ── Base element styles ───────────────────────────────────── */
+
+html, body {
+  font-family: var(--font-sans);
+  background: var(--bg-background);
+  color: var(--text-main);
+  font-size: var(--fs-base);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, .h1 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-hero);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, var(--text-main) 40%, var(--color-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+h2, .h2 {
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+}
+
+h3, .h3 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-md);
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.obituary, .serif-display {
+  font-family: var(--font-serif);
+  font-size: var(--fs-2xl);
+  font-weight: 400;
+  color: var(--text-main);
+  letter-spacing: -0.005em;
+  line-height: 1.25;
+}
+
+.ob-num {
+  font-family: var(--font-serif);
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: var(--fs-3xl);
+  letter-spacing: -0.02em;
+}
+
+p, .body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+code, .mono, kbd, pre {
+  font-family: var(--font-mono);
+}
+
+.meta-label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(139, 42, 42, 0.08);
+  border: 1px solid rgba(139, 42, 42, 0.2);
+  border-radius: 100px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-danger);
+  letter-spacing: 0.5px;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover { color: var(--color-primary-hover); }

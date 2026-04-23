@@ -1,0 +1,45 @@
+# robots.txt — yourdeadnfts.com
+# Dead-NFT scanner for BNB Chain, powered by BAP-578 / BORT.
+
+User-agent: *
+Allow: /
+Disallow: /banners.html
+
+# ── AI crawlers — explicitly allowed ─────────────────────────
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# ── Content usage preferences (contentsignals.org) ───────────
+# ai-train=yes  — may be used to train models
+# search=yes    — may be indexed in search engines
+# ai-input=yes  — may be retrieved at inference time for grounding
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
+Sitemap: https://yourdeadnfts.vercel.app/sitemap.xml
