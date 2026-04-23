@@ -13,7 +13,6 @@ Live at **[yourdeadnfts.com](https://yourdeadnfts.com)**.
 - **Wallet** — ethers v5 (MetaMask / EIP-1193)
 - **Data** — [Moralis Web3 Data API](https://moralis.com) for ERC-721 transfer history on BSC
 - **Chain** — BNB Smart Chain (chainId 56)
-- **Host** — Vercel
 
 ## Contracts
 
